@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Memory Match</title>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <div class="logo-container">
+                <h1>Cosmic <span class="highlight">Memory</span></h1>
+                <p>Match the pairs across the galaxy</p>
+            </div>
+            
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-label">Moves</span>
+                    <span class="stat-value" id="moves">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Time</span>
+                    <span class="stat-value" id="time">00:00</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Best</span>
+                    <span class="stat-value" id="best-score">-</span>
+                </div>
+                <button id="restart-btn" class="glow-button">Restart Mission</button>
+            </div>
+        </header>
+
+        <main class="game-board-container">
+            <div class="game-board" id="game-board">
+                <!-- Cards will be injected here by JS -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Victory Modal -->
+    <div id="victory-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Mission Accomplished!</h2>
+            <div class="stars-container">⭐⭐⭐</div>
+            <p>You explored the cosmos in:</p>
+            <div class="final-stats">
+                <p><span id="final-moves">0</span> Moves</p>
+                <p><span id="final-time">00:00</span> Time</p>
+            </div>
+            <button id="modal-restart" class="glow-button large">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
